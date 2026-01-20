@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Reservación de Laboratorios de Idiomas ILE</title>
+
+<style>
+.titulo{
+  text-align:center;
+  margin-bottom:25px;
+  color:#2c3e50;
+  font-weight:600;
+}
+
+body{
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  background:#eef2f6;
+  padding:30px;
+}
+
+form{
+  background:#ffffff;
+  padding:25px 30px;
+  border-radius:10px;
+  max-width:720px;
+  margin:20px auto 40px auto;
+  box-shadow:0 4px 14px rgba(0,0,0,.08);
+}
+label{
+  display:block;
+  margin-top:16px;
+  font-weight:600;
+  color:#34495e;
+}
+
+select{
+  width:100%;
+  padding:9px 10px;
+  margin-top:6px;
+  border-radius:6px;
+  border:1px solid #ccd1d9;
+  background:#fff;
+}
+
+button[type="submit"]{
+  margin-top:28px;
+  padding:12px;
+  font-size:16px;
+  font-weight:600;
+  background:#0069d9;
+  border-radius:6px;
+}
+
+button[type="submit"]:hover{
+  background:#0053b3;
+}
+
+.btn-cancelar{
+  background:#dc3545;
+  color:#fff;
+  border:none;
+  padding:6px 10px;
+  border-radius:5px;
+  font-size:14px;
+  cursor:pointer;
+}
+
+.btn-cancelar:hover{
+  background:#b02a37;
+}
+
+table{
+  width:100%;
+  border-collapse:collapse;
+  margin-top:35px;
+  background:#fff;
+  box-shadow:0 2px 8px rgba(0,0,0,.05);
+}
+
+td,th{
+  border:1px solid #dee2e6;
+  padding:10px;
+  text-align:center;
+}
+
+th{
+  background:#f1f3f6;
+  font-weight:600;
+  color:#2c3e50;
+}
+
+.nota{
+  max-width:720px;
+  margin:0 auto 25px auto;
+  font-size:13px;
+  color:#6c757d;
+  text-align:center;
+}
+</style>
+
+</head>
+
+<body>
+
+<h2 class="titulo">Reservación de Laboratorios de Idiomas – ILE</h2>
+
+<form id="formReservacion">
+
+  <label>Docente</label>
+  <select id="docente" required>
+    <option value="">Seleccione</option>
+    <option>Alcocer Alfaro Cesar</option>
+    <option>Arguello Borbon Sandra</option>
+    <option>Bejarano Leiton Andres</option>
+    <option>Calvo Morera Gabriela</option>
+    <option>Corrales Solorzano Christian ("ASA")</option>
+    <option>Cortes Herrera Xenia</option>
+    <option>Gonzalez Alvarado Carlos</option>
+    <option>Gonzalez Ramirez Euyenia</option>
+    <option>Herrera Chacón Jacqueline ("ASA")</option>
+    <option>Herrera Molina Eric</option>
+    <option>Nagygeller Jimenez Xinia</option>
+    <option>Oguilve Araya Veronica</option>
+    <option>Perez Rodriguez Marlin</option>
+    <option>Rodriguez Soto Cindy</option>
+    <option>Salazar Leon Alonso</option>
+    <option>Segura Saborio Yamil</option>
+    <option>Sepulveda Aguilar Izabella</option>
+    <option>Torres Rojas Aaron</option>
+  </select>
+
+
+  <label>Laboratorio</label>
+  <select id="laboratorio" required>
+    <option value="">Seleccione</option>
+    <option>Lab.101</option>
+    <option>Lab.102</option>
+  </select>
+
+  <label>Curso</label>
+  <select id="curso" required>
+    <option value="">Seleccione</option>
+    <option>COMUNICACIÓN AVANZADA</option>
+    <option>COMUNICACIÓN ORAL I</option>
+    <option>COMUNICACIÓN ORAL II</option>
+    <option>COMUNICACIÓN ORAL III</option>
+    <option>CULTURA Y LENGUAJE</option>
+    <option>ESCRITURA AVANZADA I</option>
+    <option>ESCRITURA AVANZADA II</option>
+    <option>ESCRITURA FUNCIONAL</option>
+    <option>ESTRATEGIAS PARA LA FORMACIÓN DE LA LENGUA INGLESA</option>
+    <option>EXPRESIÓN ORAL I</option>
+    <option>EXPRESIÓN ORAL II</option>
+    <option>EXPRESIÓN ORAL III</option>
+    <option>FONOLOGÍA INGLESA</option>
+    <option>FUNDAMENTOS DE INVESTIGACIÓN</option>
+    <option>GRAMÁTICA EN CONTEXTO I</option>
+    <option>GRAMÁTICA EN CONTEXTO II</option>
+    <option>GRAMÁTICA EN CONTEXTO III</option>
+    <option>GRAMÁTICA PARA COMUNICACIÓN I</option>
+    <option>GRAMÁTICA PARA COMUNICACIÓN II</option>
+    <option>GRAMÁTICA PARA COMUNICACIÓN III</option>
+    <option>INGLES I ASA</option>
+    <option>INGLES II ASA</option>
+    <option>INGLÉS PARA COMERCIO Y NEGOCIOS I</option>
+    <option>INGLÉS PARA COMERCIO Y NEGOCIOS II</option>
+    <option>INGLÉS PARA COMERCIO Y NEGOCIOS III</option>
+    <option>INGLÉS PARA TECNOLOGÍA I</option>
+    <option>INGLÉS PARA TECNOLOGÍA II</option>
+    <option>INGLÉS PARA TECNOLOGÍA III</option>
+    <option>INGLÉS PARA TRADUCCIÓN E INTERPRETACIÓN I</option>
+    <option>INGLÉS PARA TRADUCCIÓN E INTERPRETACIÓN II</option>
+    <option>INGLÉS PARA TRADUCCIÓN E INTERPRETACIÓN III</option>
+    <option>INGLÉS PARA TURISMO I</option>
+    <option>INGLÉS PARA TURISMO II</option>
+    <option>INGLÉS PARA TURISMO III</option>
+    <option>INVESTIGACIÓN ACADÉMICA</option>
+    <option>LITERATURA GENERAL</option>
+    <option>PRÁCTICA PROFESIONAL</option>
+    <option>PRONUNCIACIÓN I</option>
+    <option>PRONUNCIACIÓN II</option>
+    <option>PRONUNCIACIÓN III</option>
+    <option>PRONUNCIACIÓN IV</option>
+    <option>RETÓRICA ORAL I</option>
+    <option>RETÓRICA ORAL II</option>
+    <option>VARIACIONES DIALECTALES</option>
+  </select>
+
+  <label>Día</label>
+  <select id="dia" required>
+    <option value="">Seleccione</option>
+    <option>Lunes</option>
+    <option>Martes</option>
+    <option>Miercoles</option>
+    <option>Jueves</option>
+    <option>Viernes</option>
+  </select>
+
+  <label>Jornada</label>
+  <select id="jornada" required>
+    <option value="">Seleccione</option>
+    <option>Mañana (08:00 - 10:00)</option>
+    <option>Mañana (10:00 - 11:59)</option>
+    <option>Mañana (08:00 - 11:59)</option>
+    <option>Noche (18:00 - 20:00)</option>
+    <option>Noche (20:00 - 21:59)</option>
+    <option>Noche (18:00 - 21:59)</option>
+  </select>
+
+  
+  <button type="submit">Reservar</button>
+
+</form>
+
+<p class="nota">
+  * Reservaciones de los laboratorios activas hasta que el docente lo desocupe. Estimado docente desactive su reserva una vez que concluya su clase por favor.
+</p>
+
+<script>
+
+document.getElementById("formReservacion").addEventListener("submit", async function (e) {
+  e.preventDefault();
+
+  const docente = document.getElementById("docente").value;
+  const laboratorio = document.getElementById("laboratorio").value;
+  const curso = document.getElementById("curso").value;
+  const dia = document.getElementById("dia").value;
+  const jornada = document.getElementById("jornada").value;
+
+  try {
+    const res = await fetch("/.netlify/functions/reservar", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        docente,
+        laboratorio,
+        curso,
+        dia,
+        jornada
+      })
+    });
+
+    if (res.status === 409) {
+      alert("⚠️ Este laboratorio ya está reservado.");
+      return;
+    }
+
+    if (!res.ok) {
+      alert("❌ Error al realizar la reserva.");
+      return;
+    }
+
+    alert("✅ Laboratorio reservado correctamente.");
+    this.reset();
+
+  } catch (err) {
+    alert("❌ Error de conexión con el servidor.");
+  }
+});
+</script>
+
+
+</body>
+</html>
