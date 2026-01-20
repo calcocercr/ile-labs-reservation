@@ -10,10 +10,18 @@ exports.handler = async (event) => {
 
     const doc = new GoogleSpreadsheet(process.env.SHEET_ID);
 
-    await doc.useServiceAccountAuth({
-      client_email: process.env.GOOGLE_CLIENT_EMAIL,
-      private_key: process.env.GOOGLE_PRIVATE_KEY.replace(/\\n/g, "\n")
-    });
+    const rawPrivateKey = process.env.GOOGLE_PRIVATE_KEY;
+
+if (!rawPrivateKey) {
+  throw new Error("GOOGLE_PRIVATE_KEY no está definida en Netlify");
+}
+
+const privateKey = rawPrivateKey.replace(/\\n/g, "\n");
+
+await doc.useServiceAccountAuth({
+  client_email: process.env.GOOGLE_CLIENT_EMAIL,
+  private_key: privateKey
+});
 
     await doc.loadInfo();
     const sheet = doc.sheetsByIndex[0];
